@@ -1,18 +1,1 @@
-pipelines:
-  - name: S_Matrix_MN_0016
-    steps:
 
-      - name: S_Matrix_MN_0016
-        type: Matrix
-        stepMode: Bash
-        configuration:
-#           multiNode: true
-        stepletMultipliers:
-          environmentVariables:
-            - foo: 
-            - car: 
-        execution:
-          onStart:
-            - set_step_var "steplet_info" "Executed matrix steplet - ${steplet_id} on node id - ${step_node_id}"
-          onExecute:
-            - echo "$steplet_info"
